@@ -1,0 +1,14 @@
+.container 
+{
+    height: calc(100vh - 70px);
+    padding: 0 4vw;
+    overflow-x: hidden;
+}
+.loading-container
+{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

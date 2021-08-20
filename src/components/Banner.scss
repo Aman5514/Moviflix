@@ -1,0 +1,89 @@
+.banner
+{
+    margin: 30px 0;
+    display: flex;
+    background-color: rgb(13, 34, 58);
+    border-radius: 12px 12px 0px 12px;
+    img
+    { 
+        border: 2px solid white;
+        border-radius: 12px 12px 0px 12px;
+        object-fit: cover;
+        width: 350px;
+    }    
+    .img-data
+    {
+        color: white;
+        padding: 10px 15px;
+        h4
+        {
+            font-size: 45px;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            align-items: center;
+            margin-bottom: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: cyan;
+        }
+        h3
+        {
+            font-size: 35px;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            align-items: center;
+            margin-bottom: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: yellow;
+            letter-spacing: 2px;
+            span
+            {
+                color: white;
+                margin-left: 5px;
+            }
+        }
+        p
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 15px;
+            line-height: 1.5;
+        }
+    }
+}
+@media only screen and (max-width:440px)
+{
+    .banner
+    {
+        margin: 25px 0;
+    }
+    .banner img
+    {
+        width: 45%;
+    }
+    .banner .img-data
+    {
+        padding: 5px 10px;
+        h4
+        {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        h3
+        {
+            font-size: 11px;
+            margin-bottom: 5px;
+            color: yellow;
+        }
+        p
+        {
+            font-size: 9px;
+            padding: 5px;
+            line-height: 1.2;
+        }
+    }
+}

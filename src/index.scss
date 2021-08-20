@@ -1,0 +1,34 @@
+@import "./components/colors";
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+::-webkit-scrollbar
+{
+  width: 8px;
+  z-index: 1000;
+  overflow: hidden;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: $layout1;
+  border-radius: 50px;
+}
+@media only screen and (max-width:440px)
+{
+  ::-webkit-scrollbar
+{
+  width: 4px;
+  z-index: 1000;
+  overflow: hidden;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: $layout1;
+  border-radius: 50px;
+}
+}

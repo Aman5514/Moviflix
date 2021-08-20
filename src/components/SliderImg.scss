@@ -1,0 +1,79 @@
+.slider
+{
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+    &:hover .slick-prev:before,
+    &:hover .slick-next:before
+    {
+        font-size: 23px;
+    }
+    .slick-list
+    {
+        overflow: visible;
+    }
+    li.slick-active button::before
+    {
+        color: cyan;
+        font-size: 8px;
+    }
+    li button::before
+    {
+        color: rgb(184, 169, 169);
+    }
+    button
+    {
+        z-index: 2;
+    }
+    .slick-prev:before,
+    .slick-next:before
+    {
+        font-size: 0px;
+
+        transition: all 0.2s;
+    }
+
+
+}
+.slider_div{
+    background-color: rgb(33, 46, 33);
+    display: flex;
+    img
+    {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        transition: 0.2s;
+        border: 2px solid transparent;
+        &:hover{
+            border: 2px solid white;
+        }
+    }
+
+    
+}
+@media only screen and (max-width:420px)
+{
+    .slider
+    {
+        height: 22vh;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        .slick-prev
+        {
+            left: -10px;
+        }
+        .slick-next
+        {
+           right: 0px;
+        }
+    }
+    .slider_div
+    {
+        height: 20vh;
+    }
+    .slick-dots
+    {
+        bottom: -15px;
+    }
+}

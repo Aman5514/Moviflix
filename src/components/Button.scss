@@ -1,0 +1,23 @@
+@import "./colors";
+
+.login_button
+{
+    padding: 6px 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    margin-right: 5px;
+    color: $textw;
+    border: 2px solid $btng;
+    border-radius: 4px;
+    outline: none;
+    background-color: $btng;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover
+    {
+        box-shadow: 0 0  10px $layout1;
+        border: 2px solid $textw;
+    }
+}

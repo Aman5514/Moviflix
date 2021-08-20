@@ -1,0 +1,130 @@
+.login_container
+{
+    height: calc(100vh - 70px);
+    width: 100%;
+    overflow-y: hidden;
+    position: relative;
+    .img1
+    {
+        background-size: cover;
+        object-fit: cover;
+        background: no-repeat;
+        height: calc(100vh + 70px);
+        width: 100%;
+        z-index: -1;
+
+    }
+    .logindata
+    {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        top: 20%;
+        padding: 10px;
+        width: 50%;
+        transform: translateX(50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 35vh;
+        border-left: 3px solid cyan;
+        p
+        {
+            font-size: 20px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            letter-spacing: 2px;
+            opacity: 0.8;
+            .star
+            {
+                color: rgb(255, 208, 0);
+                position: relative;
+                top: 5px;
+                
+            }
+        }
+        .btn
+        {
+            padding: 15px 25px;
+            border-radius: 4px;
+            color: white;
+            background-color:rgba(0, 0, 255, 0.842);
+            outline: none;
+            border: none;
+            font-size: 18px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            letter-spacing: 2px;
+            margin: 5px 20px;
+            transition: 0.3s;
+            &:hover
+            {
+                transform: scale(1.09);
+            }
+        }
+        h2
+        {
+            color: white;
+            font-size: 18px;
+            span
+            {
+                color: white;
+
+                font-size: 20px;
+                margin-left: 10px;
+                text-shadow: 0 0 10px white,
+                             0 0 20px cyan;    
+                span
+                {
+                    margin-left: 5px;
+                    color: cyan;
+                    font-size: 30px;
+                    animation: dot 2s linear infinite;
+                    @keyframes dot {
+                        0%
+                        {
+                            filter: hue-rotate(0deg);
+                        }
+                        100%
+                        {
+                            filter: hue-rotate(360deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:440px) {
+
+    .login_container .logindata
+    {
+        width: 90%;
+        transform: translateX(5%);
+    }
+    .login_container .logindata p
+    {
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 2;
+        .star
+        {
+            font-size: 20px;
+        }
+    }
+    .login_container .logindata .btn{
+        padding: 15px 20px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .login_container .logindata h2
+    {
+        font-size: 15px;
+        letter-spacing: 1px;
+        span
+        {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,205 @@
+@import "./colors";
+.header
+{
+    background: $bg7;
+    height: 70px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+    h3
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $textw;
+        margin-bottom: 5px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+
+         padding: 0 5px;
+         animation: animate 5s infinite ease-in;
+         @keyframes animate {
+             0%
+             {
+                text-shadow: 2px 0px 5px $layout1,
+                            2px 0px 20px white,
+                            2px 0px 30px $layout1;
+             }
+             25%
+             {
+                text-shadow: 2px 0px 5px blueviolet,
+                            2px 0px 20px white,
+                            2px 0px 30px blue;
+             }
+             50%
+             {
+                text-shadow: 2px 0px 5px palegreen,
+                            2px 0px 20px white,
+                            2px 0px 30px rgb(0, 255, 0);
+             }
+             100%
+             {
+                text-shadow: 2px 0px 5px rgb(255, 0, 119),
+                            2px 0px 20px white,
+                            2px 0px 30px rgb(209, 47, 47);
+             }
+         }
+    }
+
+}
+.header_menu
+{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.links 
+{
+    color: $textw;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.links span
+{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 5px;
+    position: relative;
+
+    &:after
+    {
+        content: '';
+        height: 2px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        background-color: $bg2;
+        opacity: 1; 
+        border-radius: 20px;
+        width: 0;
+        transition:all 0.3s ease-out;
+    
+    }
+}
+
+.links:hover span:after
+{
+    width: 100%;
+}
+
+.links .icon
+{
+   font-size: 18px;
+}
+
+.loginbtncontainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+    h4
+    {
+        color: $textw;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-bottom:8px;
+        text-transform: capitalize;
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (max-width: 945px) {
+    .links{
+    margin-left: 15px;
+    }
+    .links span
+    {
+        font-size: 12px;
+    }
+    .links .icon
+    {
+        font-size: 14px;
+    }
+    .header
+    {
+        justify-content: space-between;
+    }
+
+}
+@media only screen and (max-width:768px){
+    .links{
+        margin-left: 10px;
+        }
+        .links span
+        {
+            font-size: 11px;
+        }
+        .links .icon
+        {
+            font-size: 12px;
+        }
+        .header img{
+            max-width: 70px;
+            padding-left: 5px;
+        }
+        .header
+        {
+            justify-content: space-between;
+        }
+}
+
+@media only screen and (max-width:440px){
+    .header_menu
+    {
+        display: none;
+    }
+    .header
+    {
+        justify-content: space-between;
+        h3
+        {
+            font-size: 19px;
+        }
+    }
+    .loginbtncontainer
+    {
+        padding: 0 5px;
+        gap: 4px;
+        h4
+        {
+            font-size: 14px;
+            font-weight: 700;
+            color: $textw; 
+            transition: 1s;
+            &:hover
+            {
+                box-shadow: inset 100px 0 0 $textw;
+                color: $textb;
+
+            }
+        }
+    }
+    .login_button
+    {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    .username
+    {
+        margin-bottom: 5px;
+    }
+}

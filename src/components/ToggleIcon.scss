@@ -1,0 +1,32 @@
+@import "./colors";
+
+.lightmode,
+.darkmode
+{
+    margin-right: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    color: $textw;
+    animation: darkmode 2s linear infinite;
+    @keyframes darkmode {
+        0%
+        {
+            transform: rotate(0deg);
+        }
+        25%
+        {
+            transform: rotate(90deg);
+        }
+        50%
+        {
+            transform: rotate(180deg);
+        }
+        100%
+        {
+            transform: rotate(360deg);
+        }
+    }
+}
+.darkmode{
+    color: $bg6;
+}

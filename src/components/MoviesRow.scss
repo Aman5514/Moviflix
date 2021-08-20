@@ -1,0 +1,201 @@
+@import "./colors";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+    .row_title
+    {
+        color: $textw;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        user-select: none;
+        padding-left: 4px;
+        border-left: 5px solid $layout1; 
+        
+    }
+
+    .row_container
+    {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        padding: 2rem;
+        margin-top: 20px;
+        background-color: rgb(4, 15, 38);
+        border-radius: 6px;
+        outline: none;
+        // justify-content: center;
+        // flex-wrap: wrap;
+        gap: 20px;
+        
+        
+        .img_container
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 25px;
+            max-width: 300px;
+            max-height: 350px;
+            border-radius: 4px;
+            position: relative;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+            
+            &:hover img
+            {
+                opacity: 0.1;
+            }
+            &:hover .img_data
+            {
+                opacity: 1;
+            }
+            &:hover{
+                transform: scale(1.2);
+                border: 2px solid $textw;
+            }
+
+            .img
+            {
+                max-width:280px;
+                object-fit: cover;
+                max-height: 350px;
+                transition: all 0.45s;
+                position: relative;
+                user-select: none;
+            }
+            .img_data
+          {
+              position: absolute;
+              user-select: none;
+              top: 0px;
+              left: 0px;
+              bottom: 0px;
+              right: 0px;
+              color: $textw;
+              padding-bottom: 5px;
+              font-size: 14px;
+              transition: all 0.4s 0.1s;
+              opacity: 0;
+              margin-bottom: 5px;
+              overflow: hidden;
+              h3
+              {
+                  font-size: 13px;
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+                  color: $textw;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-bottom: 5px;
+                  font-family: 'Roboto', sans-serif;
+                  font-weight: 400;
+                  text-shadow: 2px 0px 5px $layout1,
+                               2px 0px 20px $textw;
+                padding: 15px 10px 0px 10px;
+              }
+              p
+              {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+                  font-weight: 400;       
+                  font-size: 12px;
+                  padding: 0 12px;
+              }
+
+              .rating
+              {
+                  margin: 10px 10px;
+                  display: flex;
+                  justify-content: center;
+                  flex-direction: column;
+                  align-items: left;
+                .imdb
+                {
+                    letter-spacing: 2px;
+                    font-size: 15px;
+                    color: yellow;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2px;
+                    border: none;
+                    .vote
+                    {
+                        color: white;
+                    }
+                }
+                  div
+                  {
+                    padding-left: 4px;
+                    margin-bottom: 5px;
+                    font-size: 13px;
+                    color: $textw;  
+                    font-weight: 600;
+                    border-left: 2px solid $layout1;
+                    font-family: 'Times New Roman', Times, serif;
+                  }
+              }
+
+          }
+
+        }
+        &::-webkit-scrollbar
+        {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width:440px)
+    {
+        .row_title
+        {
+            margin: 10px 0;
+        }
+        .row_container
+        {
+         padding: 1.5rem 0.9rem;
+         gap: 5px;
+        }
+        .row_container .img_container .img {
+            object-fit: cover;
+            max-height: 240px;
+            transition: all 0.45s;
+            position: relative;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .row_container .img_container .img_data p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 9px;
+            padding: 0 12px;
+        }
+        .row_container .img_container .img_data h3
+        {
+            font-size: 11px;
+        }
+        .row_container .img_container .img_data p{
+            font-size: 0.7em;
+        }
+        .row_container .img_container .img_data .rating div
+        {
+            font-size: 11px;
+        }
+        .row_container .img_container .img_data .rating .imdb
+        {
+            font-size: 12px;
+            color: yellow;
+        }
+        .row_container .img_container:hover
+        {
+            transform: scale(1.18);
+        }
+    }
